@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PG3_HIRANO", "PG3_HIRANO.vcxproj", "{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{A155C7EF-3940-4CEE-BA5E-B47BED1C2F19}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Debug|x64.ActiveCfg = Debug|x64
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Debug|x64.Build.0 = Debug|x64
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Debug|x86.ActiveCfg = Debug|Win32
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Debug|x86.Build.0 = Debug|Win32
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Release|x64.ActiveCfg = Release|x64
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Release|x64.Build.0 = Release|x64
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Release|x86.ActiveCfg = Release|Win32
+		{C3407F2A-3CCE-41E3-8217-BF55009BEFB0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C40EDACC-9CB5-4DD3-AAFE-B67F32F35B24}
+	EndGlobalSection
+EndGlobal
