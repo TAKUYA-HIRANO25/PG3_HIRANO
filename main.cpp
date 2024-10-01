@@ -2,6 +2,7 @@
 
 int main() {
 
+
 	printf("こんにちわ");
 
 	return 0;
