@@ -8,7 +8,7 @@
 // コールバック関数
 typedef void (*PFunc)(bool);
 
-void DisplayResult(bool Answer) {
+void Result(bool Answer) {
     if (Answer) {
         printf("正解\n");
     }
@@ -17,33 +17,33 @@ void DisplayResult(bool Answer) {
     }
 }
 
-bool IsEven(int number) {
+bool cheak(int number) {
     return number % 2 == 0;
 }
 
-int RollDice() {
+int Dice() {
     return rand() % 6 + 1;
 }
-void GuessOddOrEven(PFunc callback) {
-    int dice = RollDice();
-    int userGuess;
-    bool Even = IsEven(dice);
+void GuessEven(PFunc callback) {
+    int dice = Dice();
+    int Guess;
+    bool Even = cheak(dice);
 
     printf("サイコロの出目が奇数か偶数か当てて!(奇数: 0, 偶数: 1): ");
-    scanf_s("%d", &userGuess);
+    scanf_s("%d", &Guess);
 
-    bool userIsEven = userGuess;
+    bool cheakEven = Guess;
 
     printf("判定中...\n");
     Sleep(3000); 
 
-    callback(Even == userIsEven);
+    callback(Even == cheakEven);
 }
 
 int main() {
     srand(time(NULL));
 
-    GuessOddOrEven(DisplayResult);
+    GuessEven(Result);
 
     return 0;
 }
