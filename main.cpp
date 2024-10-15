@@ -1,29 +1,49 @@
+#include <Windows.h>
 #include <stdio.h>
-#include<Windows.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdbool.h>
 
-int Recursive(int n, int a) {
 
-	if (a <= 0) {
-		return (0);
-	}
+// コールバック関数
+typedef void (*PFunc)(bool);
 
-	return (n + Recursive(n * 2 - 50, a - 1));
+void DisplayResult(bool Answer) {
+    if (Answer) {
+        printf("正解\n");
+    }
+    else {
+        printf("不正解\n");
+    }
+}
+
+bool IsEven(int number) {
+    return number % 2 == 0;
+}
+
+int RollDice() {
+    return rand() % 6 + 1;
+}
+void GuessOddOrEven(PFunc callback) {
+    int dice = RollDice();
+    int userGuess;
+    bool Even = IsEven(dice);
+
+    printf("サイコロの出目が奇数か偶数か当てて!(奇数: 0, 偶数: 1): ");
+    scanf_s("%d", &userGuess);
+
+    bool userIsEven = userGuess;
+
+    printf("判定中...\n");
+    Sleep(3000); 
+
+    callback(Even == userIsEven);
 }
 
 int main() {
+    srand(time(NULL));
 
-	int a = 1027;
-	int b = 100;
-	int time = 8;
+    GuessOddOrEven(DisplayResult);
 
-	a *= time;
-	
-	int result = Recursive(b, time);
-
-	printf("一般的な貸金体系\n");
-	printf("時給%d円で%d時間働いた場合 = %d円になった\n", 1027, time, a);
-	printf("再帰的な貸金体系\n");
-	printf("時給%d円で%d時間働いた場合 = %d円になった\n", b, time, result);
-
-	return 0;
+    return 0;
 }
